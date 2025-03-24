@@ -14,7 +14,7 @@
        
 ![Screenshot 2025-03-23 at 00 15 01](https://github.com/user-attachments/assets/64408aaa-7d38-48bc-94d4-bd7cedab9955)
 
-### Data Source
+### Data Sources
 
      Marketing Data: The primary dataset used for this analysis is the "Marketing_data.xlsx" file, 
      containing detailed information about each Marketing campaign made by the company.
