@@ -3,7 +3,8 @@
 ## Table of Content.
 1. [Project Overview](#project-overview)
 2. [Data Sources](#Data-sources)
-3. [Recommendation](#recommendation)
+3. [Powerpoint Presentation](#powerpoint-presentation)
+4. [Recommendation](#recommendation)
 
 ### Project Overview
 ---
@@ -48,6 +49,11 @@
      The analysis results are summarised as follows
               1.
               2.
+
+### Powerpoint Presentation
+
+[MARKETFLASH PRESENTATION .pptx](https://github.com/user-attachments/files/19433524/MARKETFLASH.PRESENTATION.pptx)
+
 
 ### Recommendation
       1.
