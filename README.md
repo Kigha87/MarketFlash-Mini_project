@@ -37,7 +37,7 @@
 
       Include some interesting code worked with
       
-          ```sql
+          ``` sql
           SELECT
               c.Campaign_Name AS CampaignName,
               c.Budget / c.Conversions AS Cost_Per_Clicks
