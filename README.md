@@ -35,6 +35,11 @@
 ### Database check
 
       Include some interesting code worked with
+          ```sql
+          SELECT
+              c.Campaign_Name AS CampaignName,
+              c.Budget / c.Conversions AS Cost_Per_Clicks
+          FROM Campaigns c;
 
 ### Results/Findings
 
