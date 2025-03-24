@@ -47,8 +47,9 @@
 ### Results/Findings
 
      The analysis results are summarised as follows
-              1.
-              2.
+              1. TikTok campaigns generally showed the highest reach(Views), but Instagram had a higher 
+              average engagement (cost per view).
+              2. The men 18-40 audience segment responded particularly well to youtube video campaigns.
 
 ### Powerpoint Presentation
 
@@ -56,8 +57,9 @@
 
 
 ### Recommendation
-      1.
-      2.
+      1. Test new strategies for low-performing channels by adjusting content or audience targeting.
+      2. Replicate top executive strategies and apply their methods across the team
+      3. Uk has the best conversion rate, so increasing campaigns there can drive more ROI
 
 
 
