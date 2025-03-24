@@ -6,19 +6,19 @@
 3. [Recommendation](#recommendation)
 
 ### Project Overview
+---
 
-       To design and implement a robust database and interactive dashboard solution for MarketFlash, a growing Marketing Company. This project aims to transition MarketFlash from Spreadsheet-based data management to a structured database and provide actionable insights through a Tableau dashboard.
+       To design and implement a robust database and interactive dashboard solution for MarketFlash, a growing Marketing company. This project aims to transition MarketFlash from spreadsheet-based data management to a structured database and provide actionable insights through a Tableau dashboard.
        
 ![Screenshot 2025-03-23 at 00 15 01](https://github.com/user-attachments/assets/64408aaa-7d38-48bc-94d4-bd7cedab9955)
 
 ### Data Source
 
-     **Marketing Data** The primary dataset used for this analysis is the Marketing_data.xlxx, containing detailed information about each Marketing Campaign made by the Company.
+     *Marketing Data*: The primary dataset used for this analysis is the "Marketing_data.xlsx" file, containing detailed information about each Marketing campaign made by the company.
 
 ### Tools
 
     1. Excel-Data Cleaning
-             -
     2. Beekeeper-for Database codes
     3. Tableau-creating dashboard
 
