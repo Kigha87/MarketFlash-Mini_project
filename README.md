@@ -14,7 +14,8 @@
        a growing Marketing company. This project aims to transition  MarketFlash from spreadsheet-based 
        data management to a structured database and provide actionable insights through a Tableau dashboard.
        
-![Screenshot 2025-03-23 at 00 15 01](https://github.com/user-attachments/assets/64408aaa-7d38-48bc-94d4-bd7cedab9955)
+![Screenshot 2025-03-25 at 16 46 22](https://github.com/user-attachments/assets/1ed97b06-fc3e-48ff-aa75-1c76fdc84001)
+
 
 ### Data Sources
 
