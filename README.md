@@ -10,9 +10,9 @@
 ### Project Overview
 ---
 
-       To design and implement a robust database and interactive dashboard solution for MarketFlash, 
-       a growing Marketing company. This project aims to transition  MarketFlash from spreadsheet-based 
-       data management to a structured database and provide actionable insights through a Tableau dashboard.
+To design and implement a robust database and interactive dashboard solution for MarketFlash, 
+a growing Marketing company. This project aims to transition  MarketFlash from spreadsheet-based 
+data management to a structured database and provide actionable insights through a Tableau dashboard.
 
 This project analyzes Marketflash's 2023 marketing data to uncover key insights on user engagement, campaign performance, and revenue trends.
 
@@ -22,8 +22,8 @@ This project analyzes Marketflash's 2023 marketing data to uncover key insights 
 
 ### Data Sources
 
-     Marketing Data: The primary dataset used for this analysis is the "Marketing_data.xlsx" file, 
-     containing detailed information about each Marketing campaign made by the company.
+Marketing Data: The primary dataset used for this analysis is the "Marketing_data.xlsx" file, 
+containing detailed information about each Marketing campaign made by the company.
 
 ### Tools
 
@@ -33,28 +33,27 @@ This project analyzes Marketflash's 2023 marketing data to uncover key insights 
 
 ### Data cleaning/preparation
 
-    In this initial data preparation phase, we performed the folowing tasks:
-                    1. Data loading and inspection
-                    2. Handling missing values
-                    3. Data cleaning and formating
+In this initial data preparation phase, we performed the folowing tasks:
+    1. Data loading and inspection
+    2. Handling missing values
+    3. Data cleaning and formating
 
 ### Database check
 
-      Include some interesting code worked with
+Include some interesting code worked with
       
-          ```sql
-          SELECT
-              c.Campaign_Name AS CampaignName,
-              c.Budget / c.Conversions AS Cost_Per_Clicks
-          FROM Campaigns c;
-          ```
+```sql
+   SELECT
+   c.Campaign_Name AS CampaignName,
+   c.Budget / c.Conversions AS Cost_Per_Clicks
+   FROM Campaigns c;
+```
 
 ### Results/Findings
 
-     The analysis results are summarised as follows
-              1. TikTok campaigns generally showed the highest reach(Views), but Instagram had a higher 
-              average engagement (cost per view).
-              2. The men 18-40 audience segment responded particularly well to youtube video campaigns.
+The analysis results are summarised as follows
+   1. TikTok campaigns generally showed the highest reach(Views), but Instagram had a higher average engagement (cost per view).
+   2. The men 18-40 audience segment responded particularly well to youtube video campaigns.
 
 ### Powerpoint Presentation
 
@@ -68,10 +67,9 @@ This project analyzes Marketflash's 2023 marketing data to uncover key insights 
 
 ### Conclusion
 
-        Implimenting this dashboard empowers MarketFlash with Data-driven insights to optimize marketing 
-        campaigns, reduce costs, and improve conversion rate. By tracking performance metrics, 
-        MarketFlash can make informed decosions that drive higher efficiency, better ROI, and improve
-        customer engagement.
+- Implimenting this dashboard empowers MarketFlash with Data-driven insights to optimize marketing 
+- campaigns, reduce costs, and improve conversion rate. By tracking performance metrics, 
+- MarketFlash can make informed decosions that drive higher efficiency, better ROI, and improve customer engagement.
 
 
 
