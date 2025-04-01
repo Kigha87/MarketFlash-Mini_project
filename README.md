@@ -22,7 +22,7 @@ This project analyzes Marketflash's 2023 marketing data to uncover key insights 
 
 ### Data Sources
 
-Marketing Data: The primary dataset used for this analysis is the "Marketing_data.xlsx" file, 
+**Marketing Data:** The primary dataset used for this analysis is the "Marketing_data.xlsx" file, 
 containing detailed information about each Marketing campaign made by the company.
 
 ### Tools
@@ -40,7 +40,7 @@ In this initial data preparation phase, we performed the folowing tasks:
 
 ### Database check
 
-Include some interesting code worked with
+*Include some interesting code worked with*
       
 ```sql
    SELECT
