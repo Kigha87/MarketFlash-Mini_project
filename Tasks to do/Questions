@@ -1,0 +1,24 @@
+
+- Design an ERD (Entity Relationship Diagram / Crow’s Foot)
+
+- Create a Functional ER Diagram for the Database based on the above Entities 
+
+- Code the Database including all Keys, Datatypes and Constraints
+
+- Add at least 5 entries to every table.
+
+- Use SQL queries to check your database.
+
+Extra Challenge: Try and create SQL code for the following:
+- Average cost per click.
+- Average cost per conversion.
+- Audience Segment Performance.
+
+
+- Design the dashboard and iterate over the design using the above information as well as the interview.
+- Use the data on the worksheet (make sure to clean it for your needs first), to begin to put together your design in Tableau.
+
+
+
+
+
