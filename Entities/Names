@@ -1,0 +1,18 @@
+Campaigns (ID, Campaign_Name, StartDate, EndDate, Budget)
+
+Clients (CompanyName, Address, Email, Phone#, ContactPerson)
+
+Employees (EmpID, FName, LName, Address, Email, Phone#, Supervisor)
+
+Platforms (Platform_ID, Platform_Name, URL, Contact_Person, Contact_Phone, Contact_Email)
+ 
+- Additional entities after the interview with Markus
+Influencers(Influencer_ID, Influencer_Name, Social_Handle, Follower_Count,Contact_Details)
+
+Contents(Content_ID, Title, Description, Media_Type, Creation_Date)
+
+Payments(Payment_ID, Date, Amount, Payment_Type, Payment_Details)
+
+Metrics(Metric_ID, Impressions, Clicks, Engagement, Conversion_Rate)
+
+Advertisements( Ad_ID, Ad_Name, Type, Duration, Budget)
