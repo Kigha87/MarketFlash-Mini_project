@@ -1,0 +1,35 @@
+Campaign Number: A unique id number for each campaign.
+
+Name: The name of the campaign.
+
+Start Date: The date the campaign started.
+
+End Date: The date the campaign ended.
+
+Channel: The name of the channel (Youtube, Facebook, Instagram, TickTok, Email, etc).
+
+Client: The name of the client.
+
+Address: Address for the client.
+
+Email: The email for the client.
+
+Phone: The phone number of the client.
+
+Contact: The contact person for the client.
+
+Audience: The marketing segment that was targeted (Ex. Men 18-40, Women 25-50).
+
+Location: The target country for the campaign.
+
+Views: The number of views the campaign had.
+
+Likes: How many likes the campaign had.
+
+Clicks: How many clicks the campaign had.
+
+Conversions: How many conversions (sales, sign ups, etc.) the campaign had.
+
+Expense: How much does the campaign cost in USD.
+
+Executive: Person in the company in charge of the client / campaign.
