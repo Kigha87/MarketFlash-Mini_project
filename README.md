@@ -61,9 +61,9 @@ FROM Campaigns c;
 
 
 ### Recommendation
-      1. Test new strategies for low-performing channels by adjusting content or audience targeting.
-      2. Replicate top executive strategies and apply their methods across the team
-      3. Uk has the best conversion rate, so increasing campaigns there can drive more ROI
+1. Test new strategies for low-performing channels by adjusting content or audience targeting.
+2. Replicate top executive strategies and apply their methods across the team
+3. Uk has the best conversion rate, so increasing campaigns there can drive more ROI
 
 ### Conclusion
 
