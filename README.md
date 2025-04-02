@@ -22,31 +22,31 @@ data management to a structured database and provide actionable insights through
 
 ### Data Sources
 
-**Marketing Data:** The primary dataset used for this analysis is the "Marketing_data.xlsx" file, 
+**Marketing Data:** The primary dataset used for this analysis is the *"Marketing_data.xlsx"* file, 
 containing detailed information about each Marketing campaign made by the company.
 
 ### Tools
 
-    1. Excel-Data Cleaning
-    2. Beekeeper-for Database codes
-    3. Tableau-creating dashboard
+1. Excel-Data Cleaning
+2. Beekeeper-for Database codes
+3. Tableau-creating dashboard
 
 ### Data cleaning/preparation
 
 In this initial data preparation phase, we performed the folowing tasks:
-    1. Data loading and inspection
-    2. Handling missing values
-    3. Data cleaning and formating
+1. Data loading and inspection
+2. Handling missing values
+3. Data cleaning and formating
 
 ### Database check
 
 *Include some interesting code worked with*
       
 ```sql
-   SELECT
-   c.Campaign_Name AS CampaignName,
-   c.Budget / c.Conversions AS Cost_Per_Clicks
-   FROM Campaigns c;
+SELECT
+c.Campaign_Name AS CampaignName,
+c.Budget / c.Conversions AS Cost_Per_Clicks
+FROM Campaigns c;
 ```
 
 ### Results/Findings
@@ -57,7 +57,7 @@ In this initial data preparation phase, we performed the folowing tasks:
 
 ### Powerpoint Presentation
 
-[MARKETFLASH PRESENTATION .pptx](https://github.com/user-attachments/files/19433524/MARKETFLASH.PRESENTATION.pptx)
+*[MARKETFLASH PRESENTATION .pptx](https://github.com/user-attachments/files/19433524/MARKETFLASH.PRESENTATION.pptx)*
 
 
 ### Recommendation
