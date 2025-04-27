@@ -16,9 +16,6 @@ data management to a structured database and provide actionable insights through
 
 *This project analyzes Marketflash's 2023 marketing data to uncover key insights on user engagement, campaign performance, and revenue trends.*
 
-       
-
-
 
 ### Data Sources
 
@@ -38,7 +35,6 @@ In this initial data preparation phase, we performed the folowing tasks:
 1. Handling missing values in any column
 2. Data cleaning and formating
 3. Remove Duplicate rows.
-
 
 ### Database check
 
