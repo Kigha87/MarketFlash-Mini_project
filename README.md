@@ -46,19 +46,37 @@ In this initial data preparation phase, we performed the folowing tasks:
 *Include some interesting code worked with*
  -- ROI, CTR, CR & Profit Analysis by Campaign     
 ```sql
+-- To Test using Joins that the Database works perfectly
 SELECT
-c.Campaign_ID,
-c.Budget,
-SUM(m.Impressions) AS Total_Impressions,
-SUM(m.Clicks) AS Total_Clicks,
-SUM(m.Conversions) AS Total_Conversions,
-SUM(m.Total_Sales) AS Revenue,
-
-ROUND(SUM(m.Clicks) * 100.0 / NULLIF(SUM(m.Impressions), 0), 2) AS CTR_Percent,
-ROUND(SUM(m.conversions) * 100.0 / NULLIF(SUM(m.Clicks), 0), 2) AS CR_Percent,
-ROUND((SUM(m.Total_Sales) - c.Budget), 2) AS Profit,
-ROUND(SUM((m.Total_Sales) - c.Budget) * 100.0 / NULLIF(c.Budget, 0), 2) AS ROI_Percent
+    c.Campaign_Name,   
+    cl.Company_Name,   
+    p.Platform_Name    
+FROM
+    Campaigns c       
+JOIN
+    Clients cl ON c.Client_ID = cl.Client_ID 
+JOIN
+    Platforms p ON c.Platform_ID = p.Platform_ID 
+ORDER BY
+    cl.Company_Name,   
+    c.Campaign_Name;   
 ```
+```sql
+-- KPIs Calculations
+-- Click-Through Rate (CTR) Per Campaign
+
+SELECT
+    c.Campaign_Name,
+    perf.Campaign_ID,
+    (CAST(perf.Clicks AS FLOAT) / NULLIF(CAST(perf.Impressions AS FLOAT), 0)) * 100.0 AS CTR_Percentage
+FROM
+    Performance perf
+JOIN
+    Campaigns c ON perf.Campaign_ID = c.Campaign_ID
+ORDER BY
+    perf.Campaign_ID;
+```
+
 ### Dashboard Overview
 
 ![Screenshot 2025-03-25 at 16 46 22](https://github.com/user-attachments/assets/1ed97b06-fc3e-48ff-aa75-1c76fdc84001)
