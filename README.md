@@ -3,9 +3,14 @@
 ## Table of Content.
 1. [Project Overview](#project-overview)
 2. [Data Sources](#Data-sources)
-3. [Powerpoint Presentation](#powerpoint-presentation)
-4. [Recommendation](#recommendation)
-5. [Conclusion](#conclusion)
+3. [Tools](#tools)
+4. [Data Preparation](#data_preparation)
+5. [Interesting SQL Queries](#interesting_sql_queries)
+6. [Dashboard Overview](#dashboard_overview)
+7. [Results & Findings](#results_&_findings)
+8. [Powerpoint Presentation](#powerpoint-presentation)
+9. [Recommendation](#recommendation)
+10. [Conclusion](#conclusion)
 
 ### Project Overview
 ---
@@ -28,7 +33,7 @@ containing detailed information about each Marketing campaign made by the compan
 2. Beekeeper-for Database codes
 3. Tableau-creating dashboard
 
-### Data preparation
+### Data Preparation
 
 In this initial data preparation phase, we performed the folowing tasks:
 
@@ -36,17 +41,25 @@ In this initial data preparation phase, we performed the folowing tasks:
 2. Data cleaning and formating
 3. Remove Duplicate rows.
 
-### Database check
+### Interesting SQL Queries
 
 *Include some interesting code worked with*
-      
+ -- ROI, CTR, CR & Profit Analysis by Campaign     
 ```sql
 SELECT
-c.Campaign_Name AS CampaignName,
-c.Budget / c.Conversions AS Cost_Per_Clicks
-FROM Campaigns c;
+c.Campaign_ID,
+c.Budget,
+SUM(m.Impressions) AS Total_Impressions,
+SUM(m.Clicks) AS Total_Clicks,
+SUM(m.Conversions) AS Total_Conversions,
+SUM(m.Total_Sales) AS Revenue,
+
+ROUND(SUM(m.Clicks) * 100.0 / NULLIF(SUM(m.Impressions), 0), 2) AS CTR_Percent,
+ROUND(SUM(m.conversions) * 100.0 / NULLIF(SUM(m.Clicks), 0), 2) AS CR_Percent,
+ROUND((SUM(m.Total_Sales) - c.Budget), 2) AS Profit,
+ROUND(SUM((m.Total_Sales) - c.Budget) * 100.0 / NULLIF(c.Budget, 0), 2) AS ROI_Percent
 ```
-### Tableau Overview
+### Dashboard Overview
 
 ![Screenshot 2025-03-25 at 16 46 22](https://github.com/user-attachments/assets/1ed97b06-fc3e-48ff-aa75-1c76fdc84001)
 
