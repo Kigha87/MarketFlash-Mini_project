@@ -1,1 +1,272 @@
+-- Database Creation And Values Insertion
 
+CREATE TABLE Platforms (
+  Platform_ID INT PRIMARY KEY NOT NULL,
+  Platform_Name VARCHAR(255) NOT NULL
+  );
+  
+  INSERT INTO Platforms 
+VALUES
+(1, 'Email'),
+(2, 'Facebook'),
+(3, 'Instagram'),
+(4, 'TikTok'),
+(5, 'Youtube');
+-------------------------------------------------------------------  
+
+CREATE TABLE Influencers (
+  Influencer_ID INT PRIMARY KEY,
+  Influencer_Name VARCHAR(255) NOT NULL,
+  Follower_Count INT NOT NULL, 
+  Platform_ID INT,
+  FOREIGN KEY (Platform_ID) REFERENCES Platforms (Platform_ID) 
+);
+
+INSERT INTO Influencers
+VALUES 
+  (1, 'Michael Howard', 18166, 1),
+  (2, 'April Brewer', 26583, 2),
+  (3, 'Barbara Walker', 23458, 3),
+  (4, 'Sharon Reeves', 53589, 4),
+  (5, 'Karen Rivers', 62876, 5);
+  -------------------------------------------------------------------
+
+CREATE TABLE Clients (
+  Client_ID INT PRIMARY KEY NOT NULL,
+  Company_Name VARCHAR(255) NOT NULL,
+  Address VARCHAR NOT NULL,
+  Email VARCHAR(255) NOT NULL,
+  Phone VARCHAR(255) NOT NULL,
+  Contract_Start_Date DATE NOT NULL, 
+  Contract_End_Date DATE 
+);
+
+INSERT INTO Clients
+VALUES
+(1, 'Lopez PLC', '0806 Watson Drive Suite 662, Port Andrea, DE 42578-2286', 'zmcintyre@bauer.info', '+1(372)402-8579', '2023-12-18', '2024-01-10'),
+(2, 'Salinas-Chaves', '53637 Bonnie Walk Suite 961, South Adrianaport, IA 49560', 'richard84@hotmail.com', '+1(254)562-2603', '2023-05-18', '2023-06-04'),
+(3, 'Patterson and Sons', '0171 Patricia Street Suite 265, Frankmouth, MS 50700-0717', 'nataliemartinez@hotmail.com', '+1(228)166-2016', '2023-02-13', '2023-02-23'),
+(4, 'Riley PLC', '699 Anderson Glen, Parkerside, AZ 15616-1374', 'jennifer09@york.org', '+1(372)402-8579', '2023-08-06', '2023-08-09'),
+(5, 'Schneider PLC', '872 Davila Ville Apt. 985, Millerland, GA 42888', 'beasleycraig@yahoo.com', '+1(143)069-3791', '2023-11-11', '2023-11-16');
+----------------------------------------------------------------------------
+
+
+CREATE TABLE Departments (
+ Dept_ID INT PRIMARY KEY NOT NULL,
+ Dept_Name VARCHAR(255) NOT NULL
+);
+
+INSERT INTO Departments
+VALUES
+(1, 'Media'),
+(2, 'Design'),
+(3, 'Admin'),
+(4, 'Media'),
+(5, 'Design');
+-------------------------------------------------------
+
+CREATE TABLE Employees (
+  Employee_ID INT PRIMARY KEY NOT NULL,
+  First_Name VARCHAR(100) NOT NULL,
+  Last_Name VARCHAR(100) NOT NULL,
+  Email VARCHAR(255) NOT NULL,
+  Phone_Num VARCHAR(50) NOT NULL,
+  Supervisor VARCHAR NOT NULL,
+  Dept_ID INT,
+  FOREIGN KEY (Dept_ID) REFERENCES Departments (Dept_ID) 
+);
+
+INSERT INTO Employees
+VALUES
+(1, 'Aaron', 'Faulkner', 'aaron.faulkner@example.com', '+1(555)123-4567', 'Markus Callahan', 1),
+(2, 'Brandon ', 'Townsend Jr.', 'brandon.townsend@example.com', '+1(55)234-5678', 'Becky Brown', 2),
+(3, 'Jesus', 'Rivera', 'jesus.rivera@example', '+1(555)456-7890', 'Aaron Faulkner', 3),
+(4, 'Kyle', 'Serrano', 'kyle.serrano@example', '+1(555)567-8901', 'Markus Callahan', 4),
+(5, 'Lauren', 'Riggs', 'lauren.riggs@example', '+1(555)678-9012', 'Frank Rodriguez', 5);
+------------------------------------------------------------------
+
+
+CREATE TABLE Campaigns (
+  Campaign_ID INT PRIMARY KEY NOT NULL,
+  Campaign_Name VARCHAR(255) NOT NULL,
+  Start_Date DATE NOT NULL, 
+  End_Date DATE NOT NULL, 
+  Clicks INT NOT NULL, 
+  Conversions INT NOT NULL, 
+  Likes INT NOT NULL, 
+  Views BIGINT NOT NULL, 
+  Location VARCHAR NOT NULL,
+  Executives VARCHAR NOT NULL,
+  Revenue DECIMAL(10,2),
+  Client_ID INT NOT NULL,
+  Platform_ID INT NOT NULL,
+  FOREIGN KEY (Client_ID) REFERENCES Clients (Client_ID),
+  FOREIGN KEY (Platform_ID) REFERENCES Platforms (Platform_ID)
+);
+
+INSERT INTO Campaigns
+VALUES
+(1, 'Campaign-one', 2023-12-18, 2024-01-10, 1447, 763, 7059, 46002, 'USA', 'Becky Brown', 13961.03, 1, 1),
+(2, 'Campaign-two', 2023-05-18, 2023-06-04, 2552, 763, 9326 ,42299, 'LATAM', 'Wesley Simon', 43804.31, 2, 2),
+(3, 'Campaign-three', 2023-09-19, 2023-10-05, 2916, 112, 10000, 81576, 'Japan', 'Jesus Rivera', 26693.82, 3, 3),
+(4, 'Campaign-four', 2023-08-06, 2023-08-09, 1447, 763, 7059, 46002, 'Canada', 'Lauren Riggs', 29386.34, 4, 4),
+(5, 'Campaign-five', 2023-11-11, 2023-11-16, 2844, 560, 5735, 94539, 'UK', 'Wesley Simon', 10983.11, 5, 5);
+----------------------------------------------------------------------
+
+CREATE TABLE Performance (
+  Performance_ID INT PRIMARY KEY NOT NULL,
+  Impressions INT NOT NULL, 
+  Clicks INT NOT NULL, 
+  Conversions INT NOT NULL, 
+  Campaign_ID INT,
+  FOREIGN KEY (Campaign_ID) REFERENCES Campaigns (Campaign_ID) 
+);
+
+INSERT INTO Performance
+VALUES
+(1, 7718, 1056, 702, 1),
+(2, 8075, 1360, 182, 2),
+(3, 2446, 1655, 669, 3),
+(4, 1700, 2669, 243, 4),
+(5, 191, 4242, 753, 5);
+-----------------------------------------------------
+
+CREATE TABLE Advertisements (
+  Ad_ID INT PRIMARY KEY NOT NULL,
+  Ad_Type VARCHAR(100) NOT NULL,
+  Revenue DECIMAL(10,2) NOT NULL,
+  Campaign_ID INT NOT NULL,
+  Platform_ID INT NOT NULL,
+  FOREIGN KEY (Campaign_ID) REFERENCES Campaigns (Campaign_ID),
+  FOREIGN KEY (Platform_ID) REFERENCES Platforms (Platform_ID)
+);
+
+INSERT INTO Advertisements
+VALUES
+(1, 'Display Ad', 37425.85, 1, 1),
+(2, 'Social Media Ad', 21913.56, 2, 2),
+(3, 'Video Ad', 26575.16, 3, 3),
+(4, 'Sponsored Post', 12727.96, 4, 4),
+(5, 'Native Ad', 30299.78, 5, 5);
+-----------------------------------------------------------
+
+
+CREATE TABLE Payments (
+  Payment_ID INT PRIMARY KEY NOT NULL,
+  Payment_Date DATE NOT NULL, 
+  Revenue DECIMAL(10,2) NOT NULL, 
+  Campaign_ID INT NOT NULL,
+  Influencer_ID INT NOT NULL,
+  FOREIGN KEY (Campaign_ID) REFERENCES Campaigns (Campaign_ID),
+  FOREIGN KEY (Influencer_ID) REFERENCES Influencers (Influencer_ID) 
+);
+
+INSERT INTO Payments
+VALUES
+(1, 2023-04-24, 49463.69, 1, 1),
+(2, 2023-12-23, 8152.59, 2, 2),
+(3, 2024-01-08, 23431.50, 3, 3),
+(4, 2023-07-29, 13841.04, 4, 4),
+(5, 2023-10-15, 38057.70, 5, 5);
+--------------------------------------------------------------
+
+
+CREATE TABLE Contents (
+  Content_ID INT PRIMARY KEY NOT NULL,
+  Content_Type VARCHAR(100) NOT NULL,
+  Campaign_ID INT NOT NULL,
+  Platform_ID INT NOT NULL,
+  Influencer_ID INT NOT NULL,
+  FOREIGN KEY (Campaign_ID) REFERENCES Campaigns (Campaign_ID),
+  FOREIGN KEY (Platform_ID) REFERENCES Platforms (Platform_ID),
+  FOREIGN KEY (Influencer_ID) REFERENCES Influencers (Influencer_ID)
+);
+
+INSERT INTO Contents
+VALUES
+(1, 'Blog Posts', 1, 1, 1),
+(2, 'Image and Graphics', 2, 2, 2),
+(3, 'Short-form Videos', 3, 3, 3),
+(4, 'Podcasts', 4, 4, 4),
+(5, 'Newsletters', 5, 5, 5);
+--------------------------------------------------------------------
+-- To Test using Joins that the Database works perfectly
+SELECT
+    c.Campaign_Name,   
+    cl.Company_Name,   
+    p.Platform_Name    
+FROM
+    Campaigns c       
+JOIN
+    Clients cl ON c.Client_ID = cl.Client_ID 
+JOIN
+    Platforms p ON c.Platform_ID = p.Platform_ID 
+ORDER BY
+    cl.Company_Name,   
+    c.Campaign_Name;   
+--------------------------------------------------------------------
+
+-- KPIs Calculations
+-- Click-Through Rate (CTR) Per Campaign
+
+SELECT
+    c.Campaign_Name,
+    perf.Campaign_ID,
+    (CAST(perf.Clicks AS FLOAT) / NULLIF(CAST(perf.Impressions AS FLOAT), 0)) * 100.0 AS CTR_Percentage
+FROM
+    Performance perf
+JOIN
+    Campaigns c ON perf.Campaign_ID = c.Campaign_ID
+ORDER BY
+    perf.Campaign_ID;
+----------------------------------------------------------
+
+-- Cnversion Rate (CR) Per Campaign
+
+SELECT
+    c.Campaign_Name,
+    perf.Campaign_ID,
+    (CAST(perf.Conversions AS FLOAT) / NULLIF(CAST(perf.Clicks AS FLOAT), 0)) * 100.0 AS Conversion_Rate_Percentage
+FROM
+    Performance perf
+JOIN
+    Campaigns c ON perf.Campaign_ID = c.Campaign_ID
+ORDER BY
+    perf.Campaign_ID;
+-------------------------------------------------------------
+
+-- Cost Per Clicks (CPC) Per Campaign 
+
+SELECT
+    c.Campaign_Name,
+    p.Campaign_ID,
+    SUM(CAST(pay.Revenue AS DECIMAL(12, 2))) / NULLIF(CAST(p.Clicks AS FLOAT), 0) AS Cost_Per_Click
+FROM
+    Performance p
+JOIN
+    Payments pay ON p.Campaign_ID = pay.Campaign_ID
+JOIN
+    Campaigns c ON p.Campaign_ID = c.Campaign_ID
+GROUP BY
+    c.Campaign_Name, p.Campaign_ID, p.Clicks 
+ORDER BY
+    p.Campaign_ID;
+
+--------------------------------------------------------------------
+
+-- Cost Per Acquisition/Conversion (CPA) per Campaign
+
+SELECT
+    c.Campaign_Name,
+    p.Campaign_ID,
+    SUM(CAST(pay.Revenue AS DECIMAL(12, 2))) / NULLIF(CAST(p.Conversions AS FLOAT), 0) AS Cost_Per_Acquisition
+FROM
+    Performance p
+JOIN
+    Payments pay ON p.Campaign_ID = pay.Campaign_ID
+JOIN
+    Campaigns c ON p.Campaign_ID = c.Campaign_ID
+GROUP BY
+    c.Campaign_Name, p.Campaign_ID, p.Conversions 
+ORDER BY
+    p.Campaign_ID;
