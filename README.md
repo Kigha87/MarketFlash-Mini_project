@@ -31,14 +31,13 @@ containing detailed information about each Marketing campaign made by the compan
 2. Beekeeper-for Database codes
 3. Tableau-creating dashboard
 
-### Data cleaning/preparation
+### Data preparation
 
 In this initial data preparation phase, we performed the folowing tasks:
-1. Data loading and inspection
-2. Handling missing values
-3. Data cleaning and formating
 
-### ER Diagram
+1. Handling missing values in any column
+2. Data cleaning and formating
+3. Remove Duplicate rows.
 
 
 ### Database check
