@@ -17,7 +17,7 @@ data management to a structured database and provide actionable insights through
 *This project analyzes Marketflash's 2023 marketing data to uncover key insights on user engagement, campaign performance, and revenue trends.*
 
        
-![Screenshot 2025-03-25 at 16 46 22](https://github.com/user-attachments/assets/1ed97b06-fc3e-48ff-aa75-1c76fdc84001)
+
 
 
 ### Data Sources
@@ -38,6 +38,9 @@ In this initial data preparation phase, we performed the folowing tasks:
 2. Handling missing values
 3. Data cleaning and formating
 
+### ER Diagram
+
+
 ### Database check
 
 *Include some interesting code worked with*
@@ -48,6 +51,9 @@ c.Campaign_Name AS CampaignName,
 c.Budget / c.Conversions AS Cost_Per_Clicks
 FROM Campaigns c;
 ```
+### Tableau Overview
+
+![Screenshot 2025-03-25 at 16 46 22](https://github.com/user-attachments/assets/1ed97b06-fc3e-48ff-aa75-1c76fdc84001)
 
 ### Results/Findings
 
