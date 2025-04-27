@@ -43,7 +43,7 @@ In this initial data preparation phase, we performed the folowing tasks:
 
 ### Interesting SQL Queries
 
-*Include some interesting code worked with*
+
  -- ROI, CTR, CR & Profit Analysis by Campaign     
 ```sql
 -- To Test using Joins that the Database works perfectly
