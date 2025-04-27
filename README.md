@@ -79,7 +79,8 @@ ORDER BY
 
 ### Dashboard Overview
 
-![Screenshot 2025-03-25 at 16 46 22](https://github.com/user-attachments/assets/1ed97b06-fc3e-48ff-aa75-1c76fdc84001)
+<img width="1196" alt="Screenshot 2025-04-27 at 17 29 01" src="https://github.com/user-attachments/assets/74e5030e-3a76-469c-ab8c-15bdc2d49d12" />
+
 
 ### Results/Findings
 
